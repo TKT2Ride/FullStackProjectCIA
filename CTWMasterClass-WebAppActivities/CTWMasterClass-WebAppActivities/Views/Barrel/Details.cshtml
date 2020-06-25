@@ -1,0 +1,104 @@
+﻿@model CTWMasterClass_WebAppActivities.Models.Barrel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Barrel</h4>
+    <hr />
+    <div class="container-fluid">
+        <div class="background">
+            <div class="row">
+                <div class="col-sm-4" align="left">
+                    <img src="~/Content/Images/BarrelLogo.jpg" width="35%" />
+                </div>
+                <div class="col-sm-8">
+                    <h1 class="header">
+                        CIA Barrel Tracking
+                    </h1>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-sm-12">
+                    <button onclick="document.location = 'Index.cshtml'" class="buttonFormatting">Back To Home Page</button>
+                    <button onclick="document.location = 'Edit.cshtml'" class="buttonFormatting">Edit This Barrel</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-4">
+                    <h2 class="header">
+                        Specifications for Barrel:
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12" align="center">
+                    
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-sm-12">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Radius)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Radius)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Height)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Height)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ConstructionMaterial)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ConstructionMaterial)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Contents)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Contents)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.CurrentLocation)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.CurrentLocation)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.DateCreated)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.DateCreated)
+                        </dd>
+
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
