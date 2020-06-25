@@ -1,7 +1,48 @@
-﻿
+﻿@model CTWMasterClass_WebAppActivities.Models.Barrel
+
 @{
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 align="center">CIA Barrel Tracking</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <p align="center">Are you sure you want to delete the following Barrel:</p>
+            <p align="center">@Html.DisplayNameFor(model => model.Name)</p>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <!--Blank for offset-->
+        </div>
+        <div class="col-sm-2">
+            
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div align="center" class="form-actions no-color">
+                    <input  type="submit" value="Delete" />
+                    
+                </div>
+            }
+
+
+        </div>
+        <div class="col-sm-2">
+            <button class="buttonFormatting" align="center">
+                @Html.ActionLink("Back to Home", "Index")
+            </button>
+        </div>
+        <div class="col-sm-4">
+            <!--Blank for offset-->
+        </div>
+    </div>
+</div>
 

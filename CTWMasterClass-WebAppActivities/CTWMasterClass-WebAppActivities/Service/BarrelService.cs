@@ -24,6 +24,11 @@ namespace CTWMasterClass_WebAppActivities.Service
         {
             repository.AddBarrel(toAdd);
         }
+       
+        public void DeleteBarrel(Barrel toDelete)
+        {
+            repository.DeleteBarrel(toDelete);
+        }
 
     }
 }
