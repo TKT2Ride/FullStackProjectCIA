@@ -50,12 +50,16 @@ namespace CTWMasterClass_WebAppActivities.Controllers
 
         public ActionResult Delete(int? id)
         {
-           if (id == null)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Barrel barrel = service.Get((int)id);
-            return View(barrel);
+            Barrel barr = service.GetBarrelByID((int)id);
+            if (barr == null)
+            {
+                return HttpNotFound();
+            }
+            return View(barr);
         }
     }
 }
