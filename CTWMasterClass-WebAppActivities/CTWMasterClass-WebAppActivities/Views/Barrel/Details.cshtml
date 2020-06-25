@@ -24,8 +24,12 @@
             <hr />
             <div class="row">
                 <div class="col-sm-12">
-                    <button onclick="document.location = 'Index.cshtml'" class="buttonFormatting">Back To Home Page</button>
-                    <button onclick="document.location = 'Edit.cshtml'" class="buttonFormatting">Edit This Barrel</button>
+                    <button class="buttonFormatting">
+                        @Html.ActionLink("Back to List", "Index")
+                    </button>
+                    <button class="buttonFormatting">
+                        Edit
+                    </button>
                 </div>
             </div>
             <div class="row">
@@ -44,6 +48,20 @@
             <div class="row">
                 <div class="col-sm-12">
                     <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Name)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Weight)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Weight)
+                        </dd>
                         <dt>
                             @Html.DisplayNameFor(model => model.Radius)
                         </dt>
