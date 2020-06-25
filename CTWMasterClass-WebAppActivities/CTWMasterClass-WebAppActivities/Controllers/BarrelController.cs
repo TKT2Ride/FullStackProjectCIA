@@ -74,6 +74,28 @@ namespace CTWMasterClass_WebAppActivities.Controllers
             }
             return View(barrel);
         }
+
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Barrel barr = service.GetBarrelById((int)id);
+            if (barr == null)
+            {
+                return HttpNotFound();
+            }
+            return View(barr);
+        }
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Barrel bar = service.GetBarrelById(id);
+            service.DeleteBarrel(bar);
+            return RedirectToAction("Index");
+        }
     }
 }
 
