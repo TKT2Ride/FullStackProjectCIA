@@ -17,6 +17,13 @@
         <p>
             @Html.ActionLink("Create New", "Create", null, new { @class = "buttonFormatting" })
         </p>
+        <div>
+            <h6>Enter Minimum Weight to Filter Barrels</h6>
+            <form action="~/Barrel/Filtered" method="post">
+                <input name="heavierThan" />
+                <input type="submit" name="submit" />
+            </form>
+        </div>
         <div class="body-content">
             <div class="text">
                 <table class="table">
