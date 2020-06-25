@@ -19,6 +19,10 @@ namespace CTWMasterClass_WebAppActivities.Models
         {
             return new ApplicationDbContext();
         }
+        public static ApplicationDbContext Edit()
+        {
+            return new ApplicationDbContext();
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
