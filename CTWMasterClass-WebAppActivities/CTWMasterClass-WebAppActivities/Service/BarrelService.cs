@@ -40,6 +40,20 @@ namespace CTWMasterClass_WebAppActivities.Service
             repository.SaveEdits(toSave);
         }
 
+        public List<Barrel> GetAboveWeight(double heavierThan)
+        {
+            List<Barrel> all = repository.GetAllBarrels();
+            List<Barrel> weightedList = new List<Barrel>();
+            foreach (Barrel container in all)
+            {
+                if (container.Weight > heavierThan)
+                {
+                    weightedList.Add(container);
+                }
+            }
+            return weightedList;
+        }
+
     }
 }
 

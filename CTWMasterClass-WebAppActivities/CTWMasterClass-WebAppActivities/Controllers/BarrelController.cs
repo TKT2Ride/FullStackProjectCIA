@@ -96,6 +96,16 @@ namespace CTWMasterClass_WebAppActivities.Controllers
             service.DeleteBarrel(bar);
             return RedirectToAction("Index");
         }
+        public ActionResult ShowOverWeight(double weight)
+        {
+            return View(service.GetAboveWeight(weight));
+        }
+
+        [HttpPost]
+        public ActionResult Filtered(int heavierThan)
+        {
+            return View("Index", service.GetAboveWeight(heavierThan));
+        }
     }
 }
 
