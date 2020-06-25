@@ -1,17 +1,96 @@
-﻿@{
-    Layout = null;
+﻿@model CTWMasterClass_WebAppActivities.Models.Barrel
+
+@{
+    ViewBag.Title = "Details";
 }
 
-<!DOCTYPE html>
+<h2>Details</h2>
+<div class="container-fluid">
+    <div class="background">
+        <div class="row">
+            <div class="col-sm-4" align="left">
+                <img src="~/Content/Images/BarrelLogo.jpg" width="35%" />
+            </div>
+            <div class="col-sm-8">
+                <h1 class="header">
+                    CIA Barrel Tracking
+                </h1>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-sm-12">
+                <button onclick="document.location = 'Index.cshtml'" class="buttonFormatting">Back To Home Page</button>
+                <button onclick="document.location = 'Edit.cshtml'" class="buttonFormatting">Edit This Barrel</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-offset-4">
+                <h2 class="header">
+                    Specifications for Barrel:
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12" align="center">
+                @Html.DisplayFor(model => model.Name)
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-sm-12">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Radius)
+                    </dt>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div>
-    
+                    <dd>
+                        @Html.DisplayFor(model => model.Radius)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Height)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Height)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ConstructionMaterial)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ConstructionMaterial)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Contents)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Contents)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.CurrentLocation)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.CurrentLocation)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.DateCreated)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.DateCreated)
+                    </dd>
+
+                </dl>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+</div>
+

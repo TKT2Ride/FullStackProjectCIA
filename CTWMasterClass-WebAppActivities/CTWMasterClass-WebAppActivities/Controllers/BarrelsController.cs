@@ -13,5 +13,9 @@ namespace CTWMasterClass_WebAppActivities.Controllers
         {
             return View();
         }
+        public ActionResult Details()
+        {
+            return View();
+        }
     }
 }
