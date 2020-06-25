@@ -61,6 +61,14 @@ namespace CTWMasterClass_WebAppActivities.Controllers
             }
             return View(barr);
         }
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Barrel bar = service.GetBarrelByID(id);
+            service.DeleteBarrel(bar);
+            return RedirectToAction("Index");
+        }
     }
 }
 
