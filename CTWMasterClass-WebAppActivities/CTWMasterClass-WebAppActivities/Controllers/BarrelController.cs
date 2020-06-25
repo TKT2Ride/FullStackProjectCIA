@@ -48,6 +48,19 @@ namespace CTWMasterClass_WebAppActivities.Controllers
 
             return View(barrel);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "Id,Name,Radius,Height,Weight,ConstructionMaterial,Contents,CurrentLocation,DateCreated")] Barrel barrel)
+        {
+            if (ModelState.IsValid)
+            {
+                service.SaveEdits(barrel);
+                return RedirectToAction("Index");
+            }
+            return View(barrel);
+        }
+
         public ActionResult Details()
         {
             return View();
