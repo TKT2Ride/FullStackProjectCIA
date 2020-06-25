@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
 
 namespace CTWMasterClass_WebAppActivities.Service
 {
@@ -24,14 +25,19 @@ namespace CTWMasterClass_WebAppActivities.Service
         {
             repository.AddBarrel(toAdd);
         }
-        public Barrel GetBarrelByID(int id)
+        public Barrel GetBarrelById(int Id)
         {
-            return repository.GetBarrelByID(id);
+            return repository.GetBarrelById(Id);
         }
        
         public void DeleteBarrel(Barrel toDelete)
         {
             repository.DeleteBarrel(toDelete);
+        }
+
+        public void SaveEdits(Barrel toSave)
+        {
+            repository.SaveEdits(toSave);
         }
 
     }
