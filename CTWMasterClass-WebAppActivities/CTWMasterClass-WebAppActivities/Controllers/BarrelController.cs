@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace CTWMasterClass_WebAppActivities.Controllers
 {
@@ -34,7 +35,6 @@ namespace CTWMasterClass_WebAppActivities.Controllers
             }
             return View(barrel);
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Barrel barrel)
