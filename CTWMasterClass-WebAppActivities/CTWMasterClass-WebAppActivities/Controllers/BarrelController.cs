@@ -35,9 +35,10 @@ namespace CTWMasterClass_WebAppActivities.Controllers
             }
             return View(barrel);
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Barrel barrel)
+        public ActionResult Create([Bind(Include = "Id,Name,Radius,Height,Weight,ConstructionMaterial,Contents,CurrentLocation,DateCreated")] Barrel barrel)
         {
             if (ModelState.IsValid)
             {
