@@ -12,11 +12,12 @@
     <div class="container-fluid">
         <div class="background">
             <div class="row">
-                <div class="col-sm-4" align="left">
-                    <img src="~/Content/Images/BarrelLogo.jpg" width="35%" />
+                <div class="col-sm-2" align="left">
+
+                    <img src="~/Content/Images/BarrelLogo.jpg" width="100%" />
                 </div>
-                <div class="col-sm-8">
-                    <h1 class="header">
+                <div class="col-sm-10">
+                    <h1 class="header" align="center">
                         CIA Barrel Tracking
                     </h1>
                 </div>
@@ -24,8 +25,8 @@
             <hr />
             <div class="row">
                 <div class="col-sm-12">
-                    <button class="buttonFormatting">
-                        @Html.ActionLink("Back to List", "Index")
+                    <button class="buttonFormatting" onclick="location.href='@Url.Action("Index")'">
+                        Back to List
                     </button>
                     <button class="buttonFormatting">
                         Edit
@@ -33,28 +34,25 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-offset-4">
-                    <h2 class="header">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10" >
+                    <h2 class="header" align="center">
                         Specifications for Barrel:
                     </h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12" align="center">
-                    
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <h2 class="header" align="center">
+                        @Html.DisplayFor(model => model.Name)
+                    </h2>
                 </div>
             </div>
             <hr />
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-offest-8">
                     <dl class="dl-horizontal">
-                        <dt>
-                            @Html.DisplayNameFor(model => model.Name)
-                        </dt>
-
-                        <dd>
-                            @Html.DisplayFor(model => model.Name)
-                        </dd>
                         <dt>
                             @Html.DisplayNameFor(model => model.Weight)
                         </dt>
@@ -118,5 +116,4 @@
 
 </div>
 <p>
-    @Html.ActionLink("Back to List", "Index")
 </p>
