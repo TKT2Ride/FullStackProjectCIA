@@ -61,14 +61,13 @@ namespace CTWMasterClass_WebAppActivities.Controllers
             return View(barrel);
         }
 
-        public ActionResult Details()
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Barrel barrel = service.GetBarrelByID((int)id);
+            Barrel barrel = service.GetBarrelById((int)id);
             if (barrel == null)
             {
                 return HttpNotFound();

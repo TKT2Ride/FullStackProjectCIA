@@ -29,8 +29,8 @@
                     <button class="buttonFormatting" onclick="location.href='@Url.Action("Index")'">
                         Back to List
                     </button>
-                    <button class="buttonFormatting">
-                        Edit This Barrel
+                    <button class="buttonFormatting" onclick="location.href='@Url.Action("Edit",  new { id = Model.Id})'">
+                            Edit This Barrel
                     </button>
                 </div>
             </div>
