@@ -175,6 +175,10 @@
     <Compile Include="Migrations\202006241937283_Barrel.Designer.cs">
       <DependentUpon>202006241937283_Barrel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006251456598_BarrelMod.cs" />
+    <Compile Include="Migrations\202006251456598_BarrelMod.Designer.cs">
+      <DependentUpon>202006251456598_BarrelMod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Barrel.cs" />
@@ -196,6 +200,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\BarrelLogo.jpg" />
     <Content Include="INSTRUCTIONS\Instructions.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -227,6 +232,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Barrel\Index.cshtml" />
     <Content Include="Views\Barrel\Create.cshtml" />
+    <Content Include="Views\Barrel\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
@@ -247,6 +253,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202006241937283_Barrel.resx">
       <DependentUpon>202006241937283_Barrel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006251456598_BarrelMod.resx">
+      <DependentUpon>202006251456598_BarrelMod.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

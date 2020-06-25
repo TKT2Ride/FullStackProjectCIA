@@ -3,6 +3,19 @@
     padding-bottom: 20px;
 }
 
+.header {
+    color: #00021a;
+    font-family: Lato;
+}
+
+.text {
+    color: #000329;
+    font-family: 'Trebuchet MS';
+}
+
+.background {
+    background-color: #f5ffff;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -13,7 +26,11 @@
    will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
+    text-align: center;
     white-space: normal;
+    color: #000329;
+    font-family: 'Trebuchet MS';
+    font-size: medium;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -22,3 +39,24 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.buttonFormatting {
+    background-color: #000759;
+    border: 2px solid #000759;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: large;
+    font-family: Georgia;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    width: 15%;
+}
+
+    .buttonFormatting:hover {
+        background-color: white;
+        color: #557A95;
+    }
