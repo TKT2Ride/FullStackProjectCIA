@@ -232,6 +232,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Barrel\Index.cshtml" />
     <Content Include="Views\Barrel\Create.cshtml" />
+    <Content Include="Views\Barrel\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
