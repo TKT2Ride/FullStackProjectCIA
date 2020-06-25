@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace CTWMasterClass_WebAppActivities.Controllers
 {
@@ -21,10 +22,23 @@ namespace CTWMasterClass_WebAppActivities.Controllers
         {
             return View();
         }
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Barrel barrel = service.GetBarrelById((int)id);
+            if (barrel == null)
+            {
+                return HttpNotFound();
+            }
+            return View(barrel);
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Barrel barrel)
+        public ActionResult Create([Bind(Include = "Id,Name,Radius,Height,Weight,ConstructionMaterial,Contents,CurrentLocation,DateCreated")] Barrel barrel)
         {
             if (ModelState.IsValid)
             {
@@ -34,6 +48,20 @@ namespace CTWMasterClass_WebAppActivities.Controllers
 
             return View(barrel);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "Id,Name,Radius,Height,Weight,ConstructionMaterial,Contents,CurrentLocation,DateCreated")] Barrel barrel)
+        {
+            if (ModelState.IsValid)
+            {
+                service.SaveEdits(barrel);
+                return RedirectToAction("Index");
+            }
+            return View(barrel);
+        }
+
+        public ActionResult Details()
         public ActionResult Details(int? id)
         {
             if (id == null)
