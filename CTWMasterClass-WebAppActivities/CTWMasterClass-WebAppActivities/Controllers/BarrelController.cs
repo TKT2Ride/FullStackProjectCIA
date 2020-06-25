@@ -81,7 +81,7 @@ namespace CTWMasterClass_WebAppActivities.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Barrel barr = service.GetBarrelByID((int)id);
+            Barrel barr = service.GetBarrelById((int)id);
             if (barr == null)
             {
                 return HttpNotFound();
@@ -92,7 +92,7 @@ namespace CTWMasterClass_WebAppActivities.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Barrel bar = service.GetBarrelByID(id);
+            Barrel bar = service.GetBarrelById(id);
             service.DeleteBarrel(bar);
             return RedirectToAction("Index");
         }
