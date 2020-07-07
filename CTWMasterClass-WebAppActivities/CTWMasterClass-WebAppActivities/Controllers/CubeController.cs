@@ -60,7 +60,19 @@ namespace CTWMasterClass_WebAppActivities.Controllers
             }
             return View(Cube);
         }
-
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Cube cube = service.GetCubeById((int)id);
+            if (cube == null)
+            {
+                return HttpNotFound();
+            }
+            return View(cube);
+        }
 
 
 

@@ -251,6 +251,7 @@
     <Content Include="Views\Cube\Index.cshtml" />
     <Content Include="Views\Cube\Create.cshtml" />
     <Content Include="Views\Cube\Edit.cshtml" />
+    <Content Include="Views\Cube\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
