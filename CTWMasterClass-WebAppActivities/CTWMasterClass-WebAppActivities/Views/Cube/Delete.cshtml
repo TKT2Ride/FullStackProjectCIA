@@ -1,0 +1,46 @@
+﻿@model CTWMasterClass_WebAppActivities.Models.Cube
+
+@{
+    ViewBag.Title = "DeleteCube";
+}
+<div class="container-fluid">
+    <div class="background">
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="~/Images/BarrelLogo.jpg" width="50%" />
+            </div>
+            <div class="col-sm-6 col-sm-offset-1">
+                <h1 class="header">CIA Barrel Tracking</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="text" align="center">Are you sure you want to delete the following Barrel?</h3>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div align="center" class="form-actions no-color">
+                        <input type="submit" value="Delete" class="buttonFormatting" />
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12" align="center">
+                <button align="center" class="buttonFormatting" onclick="location.href='@Url.Action("Index")'">
+                    Back Home
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
