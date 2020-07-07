@@ -40,19 +40,5 @@ namespace CTWMasterClass_WebAppActivities.Service
             repository.SaveEdits(toSave);
         }
 
-        public List<Cube> GetAboveWeight(double heavierThan)
-        {
-            List<Cube> all = repository.GetAllCubes();
-            List<Cube> weightedList = new List<Cube>();
-            foreach (Cube container in all)
-            {
-                if (container.Weight > heavierThan)
-                {
-                    weightedList.Add(container);
-                }
-            }
-            return weightedList;
-        }
-
     }
 }
