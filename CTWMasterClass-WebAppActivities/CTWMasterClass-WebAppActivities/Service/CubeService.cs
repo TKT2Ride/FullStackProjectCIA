@@ -1,8 +1,6 @@
 ﻿using CTWMasterClass_WebAppActivities.Models;
 using CTWMasterClass_WebAppActivities.Repositories;
 using System;
-using CTWMasterClass_WebAppActivities.Repository;
-﻿using CTWMasterClass_WebAppActivities.Migrations;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
