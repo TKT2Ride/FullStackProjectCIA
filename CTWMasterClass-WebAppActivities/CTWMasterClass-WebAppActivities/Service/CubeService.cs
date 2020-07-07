@@ -1,9 +1,12 @@
-﻿using CTWMasterClass_WebAppActivities.Migrations;
-using CTWMasterClass_WebAppActivities.Repository;
+﻿using CTWMasterClass_WebAppActivities.Models;
+using CTWMasterClass_WebAppActivities.Repositories;
 using System;
+using CTWMasterClass_WebAppActivities.Repository;
+﻿using CTWMasterClass_WebAppActivities.Migrations;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
 
 namespace CTWMasterClass_WebAppActivities.Service
 {
@@ -27,8 +30,8 @@ namespace CTWMasterClass_WebAppActivities.Service
         public Cube GetCubeById(int Id)
         {
             return repository.GetCubeById(Id);
-        }
-
+        }
+
         public void DeleteCube(Cube toDelete)
         {
             repository.DeleteCube(toDelete);
@@ -39,18 +42,5 @@ namespace CTWMasterClass_WebAppActivities.Service
             repository.SaveEdits(toSave);
         }
 
-        public List<Cube> GetAboveWeight(double heavierThan)
-        {
-            List<Cube> all = repository.GetAllCubes();
-            List<Cube> weightedList = new List<Cube>();
-            foreach (Cube container in all)
-            {
-                if (container.Weight > heavierThan)
-                {
-                    weightedList.Add(container);
-                }
-            }
-            return weightedList;
-        }
     }
 }

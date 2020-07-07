@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace CTWMasterClass_WebAppActivities.Repository
+namespace CTWMasterClass_WebAppActivities.Repositories
 {
     public class CubeRepository
     {
