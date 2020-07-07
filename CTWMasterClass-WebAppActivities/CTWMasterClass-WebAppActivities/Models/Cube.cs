@@ -7,6 +7,7 @@ namespace CTWMasterClass_WebAppActivities.Models
 {
     public class Cube
     {
+        public int Id { get; set; }
         public double SideLength { get; set; }
         public double Weight { get; set; }
         public string ConstructionMaterial { get; set; }
