@@ -72,11 +72,27 @@ namespace CTWMasterClass_WebAppActivities.Controllers
                 return HttpNotFound();
             }
             return View(cube);
-        }
-
-
-
-
+        }        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Cube barr = service.GetCubeById((int)id);
+            if (barr == null)
+            {
+                return HttpNotFound();
+            }
+            return View(barr);
+        }
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Cube bar = service.GetCubeById(id);
+            service.DeleteCube(bar);
+            return RedirectToAction("Index");
+        }
     }
 }
 
