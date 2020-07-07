@@ -19,13 +19,13 @@ namespace CTWMasterClass_WebAppActivities.Controllers
             return View(service.GetAllCubes());
         }
         public ActionResult Create()
-            return View();
         {
+            return View();
         }
         public ActionResult Edit(int? id)
         {
-            {
             if (id == null)
+            {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Cube Cube = service.GetCubeById((int)id);
@@ -36,8 +36,8 @@ namespace CTWMasterClass_WebAppActivities.Controllers
             return View(Cube);
         }
 
-        [ValidateAntiForgeryToken]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Name,Radius,Height,Weight,ConstructionMaterial,Contents,CurrentLocation,DateCreated")] Cube Cube)
         {
             if (ModelState.IsValid)
@@ -46,8 +46,8 @@ namespace CTWMasterClass_WebAppActivities.Controllers
                 return RedirectToAction("Index");
             }
 
-        }
             return View(Cube);
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -61,20 +61,4 @@ namespace CTWMasterClass_WebAppActivities.Controllers
             return View(Cube);
         }
     }
-        public ActionResult ShowOverLength(double length)
-        {
-            return View(service.GetAboveLength(length));
-        }
-
-        [HttpPost]
-        public ActionResult Filtered(int longerThan)
-        {
-            return View("Index", service.GetAboveLength(longerThan));
-        }
 }
-<<<<<<<
-
-
-=======
-
->>>>>>>

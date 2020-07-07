@@ -9,8 +9,8 @@ namespace CTWMasterClass_WebAppActivities.Repository
     public class CubeRepository
     {
         private ApplicationDbContext dbContext;
-        public CubeRepository()
 
+        public CubeRepository()
         {
             dbContext = new ApplicationDbContext();
         }
@@ -19,22 +19,17 @@ namespace CTWMasterClass_WebAppActivities.Repository
             return dbContext.Cubes.ToList();
         }
 
-        public List<Cube> GetLongerCubes(double longerThan)
-        {
-            return result.ToList();
-            var result = dbContext.Cubes.Where(s => s.SideLength > longerThan);
-        }
         public void AddCube(Cube toAdd)
         {
             dbContext.Cubes.Add(toAdd);
             dbContext.SaveChanges();
         }
-        {
         public Cube GetCubeById(int id)
-        }
-            return dbContext.Cubes.Find(id);
         {
+            return dbContext.Cubes.Find(id);
+        }
         public void SaveEdits(Cube toSave)
+        {
             dbContext.Entry(toSave).State = EntityState.Modified;
             dbContext.SaveChanges();
         }
