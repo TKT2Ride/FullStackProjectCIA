@@ -248,7 +248,7 @@
     <Content Include="Views\Barrel\Details.cshtml" />
     <Content Include="Views\Barrel\Edit.cshtml" />
     <Content Include="Views\Barrel\Delete.cshtml" />
-    <Content Include="Views\Barrel\IndexCube.cshtml" />
+    <Content Include="Views\Cube\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
