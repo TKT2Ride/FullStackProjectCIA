@@ -38,7 +38,7 @@ namespace CTWMasterClass_WebAppActivities.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Radius,Height,Weight,ConstructionMaterial,Contents,CurrentLocation,DateCreated")] Cube Cube)
+        public ActionResult Create([Bind(Include = "Id,SideLength,Weight,ConstructionMaterial,Contents,CurrentLocation,DateCreated")] Cube Cube)
         {
             if (ModelState.IsValid)
             {
@@ -51,7 +51,7 @@ namespace CTWMasterClass_WebAppActivities.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Radius,Height,Weight,ConstructionMaterial,Contents,CurrentLocation,DateCreated")] Cube Cube)
+        public ActionResult Edit([Bind(Include = "Id,SideLength,Weight,ConstructionMaterial,Contents,CurrentLocation,DateCreated")] Cube Cube)
         {
             if (ModelState.IsValid)
             {
