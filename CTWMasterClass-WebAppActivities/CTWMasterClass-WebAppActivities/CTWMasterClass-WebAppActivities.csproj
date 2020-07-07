@@ -184,6 +184,10 @@
     <Compile Include="Migrations\202007071511028_Cube.Designer.cs">
       <DependentUpon>202007071511028_Cube.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007071540209_newCube.cs" />
+    <Compile Include="Migrations\202007071540209_newCube.Designer.cs">
+      <DependentUpon>202007071540209_newCube.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Barrel.cs" />
@@ -244,6 +248,7 @@
     <Content Include="Views\Barrel\Details.cshtml" />
     <Content Include="Views\Barrel\Edit.cshtml" />
     <Content Include="Views\Barrel\Delete.cshtml" />
+    <Content Include="Views\Barrel\IndexCube.cshtml" />
     <Content Include="Views\Barrel\DeleteCube.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -271,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007071511028_Cube.resx">
       <DependentUpon>202007071511028_Cube.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007071540209_newCube.resx">
+      <DependentUpon>202007071540209_newCube.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
