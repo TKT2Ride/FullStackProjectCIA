@@ -167,6 +167,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\BarrelController.cs" />
+    <Compile Include="Controllers\CubeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -189,7 +190,9 @@
     <Compile Include="Models\Cube.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BarrelRepository.cs" />
+    <Compile Include="Repository\CubeRepository.cs" />
     <Compile Include="Service\BarrelService.cs" />
+    <Compile Include="Service\CubeService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -241,6 +244,7 @@
     <Content Include="Views\Barrel\Details.cshtml" />
     <Content Include="Views\Barrel\Edit.cshtml" />
     <Content Include="Views\Barrel\Delete.cshtml" />
+    <Content Include="Views\Barrel\DeleteCube.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
