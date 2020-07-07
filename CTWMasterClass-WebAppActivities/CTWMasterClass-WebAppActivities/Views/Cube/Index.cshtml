@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<CTWMasterClass_WebAppActivities.Models.Cube>
 
 @{
-    ViewBag.Title = "IndexCube";
+    ViewBag.Title = "Index";
 }
 <div class="background">
     <div class="container-fluid">
@@ -17,6 +17,7 @@
 
         <p>
             @Html.ActionLink("Create New", "Create", null, new { @class = "buttonFormatting" })
+            @Html.ActionLink("Go to Barrels", "Index", "Barrel", null, new { @class = "buttonFormatting" })
         </p>
         <div class="body-content">
             <div class="text">
@@ -33,9 +34,6 @@
                     @foreach (var item in Model)
                     {
                         <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Name)
-                            </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.CurrentLocation)
                             </td>

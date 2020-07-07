@@ -1,0 +1,112 @@
+﻿@model CTWMasterClass_WebAppActivities.Models.Cube
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cube</h4>
+    <hr />
+    <div class="container-fluid">
+        <div class="background">
+            <div class="row">
+                <div class="col-sm-2" align="left">
+                    <img src="~/Images/BarrelLogo.jpg" width="100%"/>
+                </div>
+                <div class="col-sm-10">
+                    <h1 class="header" align="center">
+                        CIA Cube Tracking
+                    </h1>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10" align="center">
+                    <button class="buttonFormatting" onclick="location.href='@Url.Action("Index")'">
+                        Back to List
+                    </button>
+                    <button class="buttonFormatting" onclick="location.href='@Url.Action("Edit",  new { id = Model.Id})'">
+                        Edit This Cube
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <h2 class="header" align="center">
+                        Specifications for Cube:
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <h2 class="header" align="center">
+                        @Html.DisplayFor(model => model.Id)
+                    </h2>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-8">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.SideLength)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.SideLength)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Weight)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Weight)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ConstructionMaterial)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ConstructionMaterial)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Contents)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Contents)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.CurrentLocation)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.CurrentLocation)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.DateCreated)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.DateCreated)
+                        </dd>
+
+                    </dl>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
