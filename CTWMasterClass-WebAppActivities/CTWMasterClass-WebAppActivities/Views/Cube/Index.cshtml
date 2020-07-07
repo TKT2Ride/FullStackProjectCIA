@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<CTWMasterClass_WebAppActivities.Models.Cube>
 
 @{
-    ViewBag.Title = "IndexCube";
+    ViewBag.Title = "Index";
 }
 <div class="background">
     <div class="container-fluid">
@@ -33,9 +33,6 @@
                     @foreach (var item in Model)
                     {
                         <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Name)
-                            </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.CurrentLocation)
                             </td>
