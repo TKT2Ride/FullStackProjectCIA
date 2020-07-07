@@ -11,7 +11,7 @@ using System.Data.Entity;
 namespace CTWMasterClass_WebAppActivities.Controllers
 {
     public class CubeController : Controller
-    {
+    {
         private CubeService service = new CubeService();
         // GET: Cube
         public ActionResult Index()
@@ -59,24 +59,24 @@ namespace CTWMasterClass_WebAppActivities.Controllers
                 return RedirectToAction("Index");
             }
             return View(Cube);
-        }
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Cube cube = service.GetCubeById((int)id);
-            if (cube == null)
-            {
-                return HttpNotFound();
-            }
-            return View(cube);
-        }
-
-
-
-
-    }
+        }
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Cube cube = service.GetCubeById((int)id);
+            if (cube == null)
+            {
+                return HttpNotFound();
+            }
+            return View(cube);
+        }
+
+
+
+
+    }
 }
 

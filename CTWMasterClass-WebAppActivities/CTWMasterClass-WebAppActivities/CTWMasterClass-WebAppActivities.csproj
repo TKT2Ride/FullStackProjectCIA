@@ -252,6 +252,7 @@
     <Content Include="Views\Cube\Create.cshtml" />
     <Content Include="Views\Cube\Edit.cshtml" />
     <Content Include="Views\Cube\Details.cshtml" />
+    <Content Include="Views\Cube\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
