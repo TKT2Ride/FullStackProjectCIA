@@ -13,31 +13,31 @@ namespace CTWMasterClass_WebAppActivities.Service
         private CubeRepository repository;
 
         public CubeService()
-        {
             repository = new CubeRepository();
+        {
         }
-
         public List<Cube> GetAllCubes()
+
         {
             return repository.GetAllCubes();
         }
+        public List<Cube> GetAboveLength(double longerThan)
+
+        {
+            return repository.GetLongerCubes(longerThan);
+        }
         public void AddCube(Cube toAdd)
         {
-            repository.AddCube(toAdd);
         }
+            repository.AddCube(toAdd);
         public Cube GetCubeById(int Id)
         {
             return repository.GetCubeById(Id);
         }
 
-        public void DeleteCube(Cube toDelete)
-        {
-            repository.DeleteCube(toDelete);
-        }
-
         public void SaveEdits(Cube toSave)
-        {
             repository.SaveEdits(toSave);
+        {
         }
 
     }

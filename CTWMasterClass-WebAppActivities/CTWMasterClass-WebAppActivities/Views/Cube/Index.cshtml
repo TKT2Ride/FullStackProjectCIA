@@ -18,21 +18,34 @@
         <p>
             @Html.ActionLink("Create New", "Create", null, new { @class = "buttonFormatting" })
         </p>
+        <div>
+            <h6>Enter Minimum Side Length to Filter Cubes</h6>
+            <form action="~/Cube/Filtered" method="post">
+                <input name="longerThan" />
+                <input type="submit" name="submit" />
+            </form>
+        </div>
         <div class="body-content">
             <div class="text">
                 <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.SideLength)
+                        </th>
                         <th>
                             @Html.DisplayNameFor(model => model.CurrentLocation)
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.Contents)
                         </th>
-                        <th></th>
                     </tr>
 
                     @foreach (var item in Model)
                     {
                         <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SideLength)
+                            </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.CurrentLocation)
                             </td>
